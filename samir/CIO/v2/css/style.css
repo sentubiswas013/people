@@ -26,12 +26,11 @@ body{
 	position: relative;
 	width: 100%;
 	overflow: hidden;	
-	background: url(../images/bannerimg1.png) center bottom no-repeat;
-	
+	background: url(../images/bannerimg1.png) center 90px no-repeat;
+	background-size: cover;
 }
 .padL0{ padding-left: 0px; }
 .padR0{ padding-right: 0px; }
-
 
 ::-webkit-input-placeholder {
    color: #888888;
@@ -153,7 +152,17 @@ border: none;
 
 .gallery {
 	height:450px;
+	position: relative;
 }
+.overlay{
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	top: 90px;	
+	background: rgb(0,0,0, 0.5);
+}
+
 #camera_wrap_1{
 	margin-bottom:0 !important;
 }
