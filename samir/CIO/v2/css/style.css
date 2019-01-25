@@ -721,7 +721,10 @@ blockquote footer, blockquote cite{
 .class h4{
 	/*text-transform: uppercase;*/
 }
-
+.class p{
+	margin: 0px;
+	padding: 0px;
+}
 .pic1Ab{
 	padding-bottom: 15px;
 	float: right;
@@ -1272,13 +1275,13 @@ blockquote footer, blockquote cite{
 	/*font-family: 'Roboto', 'sans-serif';*/
 	font-weight: 300;
 	font-size:13px;
-	color:#e6720b;
+	color:#fff;
 	background:#232323;
 }
 input:focus{
 	/*border:0;*/
 	outline:none;
-	background:#111111;
+	/*background:#111111;*/
 }
 textarea:focus{
 	//border:0;
@@ -1567,6 +1570,7 @@ textarea {
 .foolterlink a{
 	color: #ccc;
 	padding: 0 5px;
+	text-transform: uppercase;
 }
 }
 .foolterlink a:hover{
@@ -2124,7 +2128,7 @@ margin-bottom: 35px !important;
     opacity: 0.85;
 }
 .text1{
-    color: #1e0100;
+    color: #f00;
     font-weight: bold;
     text-align: center;
     font-size: 32px;
@@ -2132,7 +2136,9 @@ margin-bottom: 35px !important;
     margin: 0px;
 }
 .text1 span{
+	font-size: 17px;
 	color: #FF9C00;
+	font-style: italic;
 }
 .text2{
     margin: 10px 0 45px 0;
@@ -2141,6 +2147,7 @@ margin-bottom: 35px !important;
     font-weight: 400;
     color: #1e0100;
     text-align: center;
+
 }
 
 .imgAbout{
@@ -2181,4 +2188,195 @@ margin-bottom: 35px !important;
 .video video{
 	width: 100%;
 	margin: 15px  0 0 0;
+}
+
+
+
+/* innerHeader */
+.innerHeader{
+	color: #fff;
+	padding: 0 0 10px 0;
+	background: #e6720b;
+}
+.innerBody{
+	padding: 30px 0;
+}
+
+
+/* login screen*/
+#login {
+  background: #eee !important;
+}
+.wrapper {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.form-signin {
+  max-width: 380px;
+  padding: 15px 35px 45px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 30px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  font-size: 16px;
+  height: auto;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="text"] {
+  margin-bottom: -1px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 20px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+/*portfolio*/
+
+#portfilter .btn{
+    color: #fff;
+    background: #913308;
+    border-radius: 0px;
+    border: 0px;
+    border-color: #913308;
+    box-shadow: #913308;
+}
+#portfilter .btn-primary:focus, #portfilter .btn-primary:hover, #portfilter .btn-primary:active{
+    border: 0px;
+    box-shadow: none;
+}
+#gallery{
+    padding-top: 20px;
+}
+#gallery h4{ color: #fff; }
+#gallery .thumbnail {
+    color: #fff;   
+    margin-bottom: 25px;
+    background-color: #fff;
+    border: 8px solid #070707;
+    border-radius: 0px;
+    overflow: hidden;
+    height: 180px;
+}
+#gallery .thumbnail0{ padding-bottom: 4px; margin-bottom: 0px; position: relative; }
+#gallery .thumbnail img{ 
+    cursor: pointer; 
+    border: 0px solid #070707; 
+    width: 100%;
+    max-height: 100%;
+}
+.location{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    background: #000;
+    opacity: 0.9;
+    padding: 4px 12px;
+    cursor: pointer;
+    font-size: 21px;
+}
+#gallery .thumbnail0 img{ cursor: pointer; }
+#gallery .thumbnail0 a{ color: #fff; }
+.caption{ background: #070707; padding: 0 0 8px 8px; margin-bottom: 25px; }
+.caption a{ color: #fff; }
+#lightbox{ 
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    display: none;
+    text-align: center;
+    background: url("../images/tr2.png");
+    z-index: 1111;
+}
+#lightboxOut{
+    position: relative;
+    border: 1px solid red;
+}
+#lightboxIn{
+    width: 500px;
+    height: 500px;
+    border: 1px solid red;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -250px 0 0 -250px;
+    overflow: hidden;
+    background: #fff;
+    border: 8px solid #fff;
+    border-radius: 8px;
+}
+#lightboxIn img{
+    width: 100%;
+    height: 100%;
+}
+#closebtn{             
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    width: 44px;
+    height: 44px;
+    z-index: 1111111;
+    display: none;
+    cursor: pointer;
+}
+#closebtn i{ 
+    color: #fff;
+    font-size: 42px;             
+}
+
+/* About Us */
+.img-polaroid {
+    margin: 0 20px;
+    padding: 1px;
+    border: 6px solid #1e2212;
+}
+
+.fran{
+    color: #fff;
+    padding: 25px 15px;
+    min-height: 270px;
+    max-height: 300px;
+    margin-bottom: 25px;
+    background: #f26838;
+    border-radius: 0px;
+    line-height: 21px;
+}
+.ico-like{
+    color: #333;
+    font-size: 50px;
+    background: #fff;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    line-height: 70px;
+    padding: 15px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 100px;
+}
+.fran h4{
+    padding: 10px 0;
+    font-weight: bold;
+}
+.commingsoon{
+	height: 400px;
 }
