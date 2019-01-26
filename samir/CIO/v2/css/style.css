@@ -2352,9 +2352,9 @@ margin-bottom: 35px !important;
 
 .fran{
     color: #fff;
-    padding: 25px 15px;
-    min-height: 270px;
-    max-height: 300px;
+    padding: 25px 10px;
+    min-height:270px;
+    max-height: 270px;
     margin-bottom: 25px;
     background: #f26838;
     border-radius: 0px;
@@ -2373,6 +2373,7 @@ margin-bottom: 35px !important;
     display: block;
     border-radius: 100px;
     overflow: hidden;
+    position: relative;
 }
 .ico-like img{
 	max-width: 150%;
@@ -2386,6 +2387,7 @@ margin-bottom: 35px !important;
     padding: 15px 0 0 0;
     margin: 0 0 0 0;
     font-weight: bold;
+    font-size: 17px;
 }
 .fran ul, .fran ul li{
 	padding: 0px;
@@ -2395,10 +2397,52 @@ margin-bottom: 35px !important;
 }
 .fran ul {
 	margin-top: 10px;
+	text-align: left;
 }
-.fran ul li span{
+.fran ul li{
+	text-align: left;
+	padding: 0 0 0 0px;
+	display: table;
+	width: 100%;
+}
+.fran ul li span.day{
 	font-size: 13px;
+	display: inline-block;
+	float: left;
+	width: 35%;
+	font-weight: bold;
+	padding: 0px;
+	margin: 0 0 0 15px;
+}
+.fran ul li span.time{
+	font-size: 13px;
+	display: inline-block;
+	margin: 0 0 0 0px;
+	float: left;
+	width: 55%;
 }
 .commingsoon{
 	height: 400px;
 }
+ #triangle-topright {
+  color: #000;
+  position: absolute;
+  right: 1px;
+  top: 1px;
+  width: 0;
+  height: 0;
+  border-top: 80px solid #fff;
+  border-left: 80px solid transparent;
+  display: none;
+}
+ #triangle-topright span{
+ 	float: left;
+ 	width: 50px;
+ 	font-weight: bold;
+ 	font-size: 17px;
+ 	margin: -65px 0 0 -60px;
+ 	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	writing-mode: lr-tb;
+ }	
