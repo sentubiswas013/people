@@ -81,14 +81,17 @@
                 <h1>Subjects</h1>
               </div>
              </div>    
-             <div class="commingsoon">
+             <!-- <div class="commingsoon">
               <div class="container">
                  <h4> Comming Soon...</h4>
                </div>
-             </div>             
-               <!-- <div class="innerBody">
-                <div class="container">
-                  <div class="row">
+             </div> -->             
+               <div class="innerBody">
+                <div class="container">                  
+                  <div class="row" id="subjectsList">
+
+                  </div>
+                  <!-- <div class="row">
                   <div class="col-sm-3 col-md-3 text-center">
                     <div class="fran">
                       <div class="ico-like"><i class="fa fa-sitemap"></i></div>
@@ -177,9 +180,9 @@
                       <p>Ranging from tiles and stone, appliances & furniture, </p>
                     </div>
                   </div>
-                </div>
-                </div>
                 </div> -->
+                </div>
+                </div>
          </div>
       </div>
       
@@ -342,6 +345,7 @@
          //jQuery
       </script>
       <script>
+
          /*menu*/
          function calculateScroll() {
             var contentTop      =   [];
@@ -371,7 +375,154 @@
                $('html, body').animate({scrollTop: $(this.hash).offset().top - 80}, 800);
                return false;
             });
-         });      
+         });
+
+         // For Subjects
+         var subjects=[
+  {
+    "name": "Abacus (Senior)",
+    "img": "https://www.yogajournal.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cg_faces:center%2Cq_auto:good%2Cw_620/MTQ2MjI3ODcyMDE5OTgxOTIx/cow-face-with-eagle-arms-forhips.jpg",
+    "fees": "700",
+    "content": "Abacus (Senior)",
+    "category" : "default",
+    "day" : "['Sunday','Monday','Tuesday','Sunday','Sunday','Sunday','Sunday']",
+    "time" : "10.00am"
+  },
+  {
+    "name": "Abacus (Junior)",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJRTz1JQhP_kTB_p_EiY0gUfZix580EmwsTtSn5OfTA_JqhDN5tw",
+    "fees": "500",
+    "content": "Abacus (Junior)",
+    "category" : "default",
+    "timing":[      
+              {"day":"Wednesday","time" : "11.00 AM - 13.00 AM"},
+              { "day" : "Friday","time" : "09.00 AM - 12.00 AM"}
+            ]
+  },
+  {
+    "name": "Art n Craft",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJRTz1JQhP_kTB_p_EiY0gUfZix580EmwsTtSn5OfTA_JqhDN5tw",
+    "fees": "500",
+    "content": "Art n Craft",
+    "category" : "default",
+    "day" : "['Sunday','Monday','Tuesday','Sunday','Sunday','Sunday','Sunday']",
+    "time" : "10.00am"
+  },
+  {
+    "name": "Bal Vikas",
+    "img": "https://www.yogajournal.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cg_faces:center%2Cq_auto:good%2Cw_620/MTQ2MjI3ODcyMDE5OTgxOTIx/cow-face-with-eagle-arms-forhips.jpg",
+    "fees": "300",
+    "content": "Bal Vikas",
+    "category" : "default",
+    "day" : "['Sunday','Monday','Tuesday','Sunday','Sunday','Sunday','Sunday']",
+    "time" : "10.00am"
+  },
+  {
+    "name": "Music",
+    "img": "https://www.yogajournal.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cg_faces:center%2Cq_auto:good%2Cw_620/MTQ2MjI3ODcyMDE5OTgxOTIx/cow-face-with-eagle-arms-forhips.jpg",
+    "fees": "1000",
+    "content": "Music",
+    "category" : "default",
+    "day" : "['Sunday','Monday','Tuesday','Sunday','Sunday','Sunday','Sunday']",
+    "time" : "10.00am"
+  },
+  {
+    "name": "Spoken English",
+    "img": "https://www.yogajournal.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cg_faces:center%2Cq_auto:good%2Cw_620/MTQ2MjI3ODcyMDE5OTgxOTIx/cow-face-with-eagle-arms-forhips.jpg",
+    "fees": "800",
+    "content": "Spoken English",
+    "category" : "default",
+    "day" : "['Sunday','Monday','Tuesday','Sunday','Sunday','Sunday','Sunday']",
+    "time" : "10.00am"
+  },
+  {
+    "name": "Yoga(All Age)",
+    "img": "https://www.yogajournal.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cg_faces:center%2Cq_auto:good%2Cw_620/MTQ2MjI3ODcyMDE5OTgxOTIx/cow-face-with-eagle-arms-forhips.jpg",
+    "fees": "600",
+    "content": "Yoga(All Age)",
+    "category" : "default",
+    "day" : "['Sunday','Monday','Tuesday','Sunday','Sunday','Sunday','Sunday']",
+    "time" : "10.00am"
+  },
+  {
+    "name": "Bharatanatyam ",
+    "img": "https://www.yogajournal.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cg_faces:center%2Cq_auto:good%2Cw_620/MTQ2MjI3ODcyMDE5OTgxOTIx/cow-face-with-eagle-arms-forhips.jpg",
+    "fees": "1000",
+    "content": "Bharatanatyam ",
+    "category" : "default",
+    "day" : "['Sunday','Monday','Tuesday','Sunday','Sunday','Sunday','Sunday']",
+    "time" : "10.00am"
+  },
+  {
+    "name": "Kathak",
+    "img": "https://www.yogajournal.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cg_faces:center%2Cq_auto:good%2Cw_620/MTQ2MjI3ODcyMDE5OTgxOTIx/cow-face-with-eagle-arms-forhips.jpg",
+    "fees": "1000",
+    "content": "Kathaks",
+    "category" : "default",
+    "day" : "['Sunday','Monday','Tuesday','Sunday','Sunday','Sunday','Sunday']",
+    "time" : "10.00am"
+  },
+  {
+    "name": "Odissi Dance",
+    "img": "https://www.yogajournal.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cg_faces:center%2Cq_auto:good%2Cw_620/MTQ2MjI3ODcyMDE5OTgxOTIx/cow-face-with-eagle-arms-forhips.jpg",
+    "fees": "800",
+    "content": "Odissi Dance",
+    "category" : "default",
+    "day" : "['Sunday','Monday','Tuesday','Sunday','Sunday','Sunday','Sunday']",
+    "time" : "10.00am"
+  },
+  {
+    "name": "Western Dance  Junior(3.5-5) Yrs",
+    "img": "https://www.yogajournal.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cg_faces:center%2Cq_auto:good%2Cw_620/MTQ2MjI3ODcyMDE5OTgxOTIx/cow-face-with-eagle-arms-forhips.jpg",
+    "fees": "1000",
+    "content": "Western Dance  Junior(3.5-5) Yrs",
+    "category" : "default",
+    "day" : "['Sunday','Monday','Tuesday','Sunday','Sunday','Sunday','Sunday']",
+    "time" : "10.00am"
+  },
+  {
+    "name": "Western Dance Senior(6 to 11)Yrs",
+    "img": "https://www.yogajournal.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cg_faces:center%2Cq_auto:good%2Cw_620/MTQ2MjI3ODcyMDE5OTgxOTIx/cow-face-with-eagle-arms-forhips.jpg",
+    "fees": "1200",
+    "content": "Western Dance Senior(6 to 11)Yrs",
+    "category" : "default",
+    "day" : "['Sunday','Monday','Tuesday','Sunday','Sunday','Sunday','Sunday']",
+    "time" : "10.00am"
+  },
+  {
+    "name": "Western Dance For Ladies",
+    "img": "https://www.yogajournal.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cg_faces:center%2Cq_auto:good%2Cw_620/MTQ2MjI3ODcyMDE5OTgxOTIx/cow-face-with-eagle-arms-forhips.jpg",
+    "fees": "1300",
+    "content": "Western Dance For Ladies",
+    "category" : "default",
+    "timing":[      
+              {"day":"Suturday","time" : "10.00 AM - 11.00 AM"},
+              { "day" : "Sunday","time" : "11.00 AM - 12.00 AM"}
+            ]
+        
+  }
+];
+          subjects.forEach(function(item){           
+            var content = "";               
+                  content += "<div class='col-sm-3 col-md-3 text-center'>"
+                    content += "<div class='fran'>"
+                      content += "<div class='ico-like'><img src='"+item.img+"'/></div>"
+                      content += "<h4>"+item.name+"</h4>"
+                      content += "<p>"+item.content+"</p>"                     
+                      content += "<ul class='timing'></ui>"
+                    content += "</div>"
+                  content += "</div>"
+              $("#subjectsList").append(content);
+              if(item.timing){                  
+                  item.timing.forEach(function(timing){
+                    $(".timing").append("<li> "+timing.day+" <span>"+timing.time+"</span></li>")
+                  })
+                }
+
+          })
+
+          
+
       </script>   
       <script type="text/javascript" charset="utf-8">
          jQuery(document).ready(function(){

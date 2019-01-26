@@ -2372,10 +2372,32 @@ margin-bottom: 35px !important;
     margin: 0 auto;
     display: block;
     border-radius: 100px;
+    overflow: hidden;
+}
+.ico-like img{
+	max-width: 150%;
+	margin: -15px 0 0 -15px;
+}
+.fran p{
+	padding-bottom: 0px;
+	 margin: 6px 0 0 0;
 }
 .fran h4{
-    padding: 10px 0;
+    padding: 15px 0 0 0;
+    margin: 0 0 0 0;
     font-weight: bold;
+}
+.fran ul, .fran ul li{
+	padding: 0px;
+	margin: 0px;
+	list-style-type: none;
+	text-align: center;
+}
+.fran ul {
+	margin-top: 10px;
+}
+.fran ul li span{
+	font-size: 13px;
 }
 .commingsoon{
 	height: 400px;
